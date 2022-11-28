@@ -33,9 +33,9 @@ While this *should* support all Source Games, I have tested these:
 AppID | Game | Works | Notes
 ----- | ---- | :---: | ----
 162107 | [DeadPoly](https://store.steampowered.com/app/1621070/) | :white_check_mark: |
-304930 | [Unturned](https://store.steampowered.com/app/304930/) | :white_check_mark: | Add +1 to the server port
+304930 | [Unturned](https://store.steampowered.com/app/304930/) | :white_check_mark: |
 251570 | [7 Days to Die](http://store.steampowered.com/app/251570) | :white_check_mark: |
-252490 | [Rust](http://store.steampowered.com/app/252490/) | :white_check_mark: | :x: |
+252490 | [Rust](http://store.steampowered.com/app/252490/) | :white_check_mark: |
 ~ | [Minecraft](http://www.minecraft.net/) | :x: |
 
 
