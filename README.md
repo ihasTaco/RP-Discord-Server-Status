@@ -24,8 +24,8 @@ I want to auto update every 5(?) minutes or so, so I will need to figure out a r
 Currently the bot will just create a new message, I want to just edit the last message sent by the bot.
 
 # How to use this
-This bot is using:
-<a href="https://github.com/Yepoleb/python-a2s">python-a2s</a> - pip3 install python-a2s
+This bot is using:<br>
+<a href="https://github.com/Yepoleb/python-a2s">python-a2s</a> - pip3 install python-a2s<br>
 <a href="https://mariadb.com/resources/blog/how-to-connect-python-programs-to-mariadb/">mariaDB</a> - pip3 install mariadb
 
 All information is held in a localhost database (you can change this in the script), so all you really need to do is add the correct information into the database and run the script with `python bot.py` and your done!
