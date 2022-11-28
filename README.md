@@ -3,6 +3,8 @@ An Open-Source Server Status Discord Bot
 
 This is an Open Source Discord Bot, made in Discord.py to query game servers!
 
+This bot is primarily going to be used for the <a href="https://discord.gg/royal-productions-360541835371741185">Royal Productions</a> Discord server, but I thought there wasn't enough Open Source query bots available, and since my favorite bot 'Game Status' has switched teams and put up a paywall for more then 5 servers (we have 9) I thought it would be a good idea to make one instead!
+
 This is my first try with python and I'm still learning the ropes, so bear with me.
 
 # What does this bot do?
@@ -25,8 +27,12 @@ I want to auto update every 5(?) minutes or so, so I will need to figure out a r
 Currently the bot will just create a new message, I want to just edit the last message sent by the bot.
 
 # How to use this
+I am not providing hosting! So you will need to, <a href="https://discordpy.readthedocs.io/en/stable/discord.html">Set up</a> a <a href="https://discord.com/developers/applications">Bot Application on Discord</a> and make sure you have MESSAGE CONTENT INTENT enabled under bots
+
 This bot is using:<br>
 <a href="https://github.com/Yepoleb/python-a2s">python-a2s</a> - pip3 install python-a2s<br>
 <a href="https://mariadb.com/resources/blog/how-to-connect-python-programs-to-mariadb/">mariaDB</a> - pip3 install mariadb
 
 All information is held in a localhost database (you can edit the database ip, port, username, password in the script, will probably make this a global variable at some point), so all you really need to do is add the correct information into the database and run the script with `python bot.py` and your done!
+
+If you use anything in my script, give me credit i guess, i don't care...
