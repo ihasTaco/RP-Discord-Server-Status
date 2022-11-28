@@ -26,6 +26,19 @@ I want to auto update every 5(?) minutes or so, so I will need to figure out a r
 
 Currently the bot will just create a new message, I want to just edit the last message sent by the bot.
 
+## Supported Games
+
+While this *should* support all Source Games, I have tested these:
+
+AppID | Game | Works | Notes
+----- | ---- | :---: | ----
+162107 | [DeadPoly](https://store.steampowered.com/app/1621070/) | :white_check_mark: |
+304930 | [Unturned](https://store.steampowered.com/app/304930/) | :white_check_mark: | Add +1 to the server port
+251570 | [7 Days to Die](http://store.steampowered.com/app/251570) | :white_check_mark: |
+252490 | [Rust](http://store.steampowered.com/app/252490/) | :white_check_mark: | :x: |
+~ | [Minecraft](http://www.minecraft.net/) | :x: |
+
+
 # How to use this
 I am not providing hosting! So you will need to, <a href="https://discordpy.readthedocs.io/en/stable/discord.html">Set up</a> a <a href="https://discord.com/developers/applications">Bot Application on Discord</a> and make sure you have MESSAGE CONTENT INTENT enabled under bots
 
