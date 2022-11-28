@@ -20,6 +20,8 @@ In it's current state:
 - This is only for Source Queries, Minecraft is not included! I will work on this at some point!
 
 # What's next?
+I want to to add a config so you can config everything to your liking without messing with the actual code.
+
 I want to add player graphs, I think I can use MatPlotLib to acheive this, but I don't how to store the player info. I don't want to store it in the database, as I would like to keep that as clean as possible, but I think that may be my only option...
 
 I want to auto update every 5(?) minutes or so, so I will need to figure out a refresh function.
