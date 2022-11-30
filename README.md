@@ -18,6 +18,12 @@ In it's current state:
 - The bot automatically refreshes the embeds! (Default is 60 seconds, you can change this in the config!)
 - the bot now has the ability to edit messages, so no more deleting old embeds!
 
+* There is one variable that you need to change to make sure the bot works as expected!
+In bot.py, you will need to change "numOfServers" to the actual number of servers you are hosting (in my case it's 9, so default is 9) 
+**IF YOU DON'T DO THIS, YOU WILL GET ERROR'S AND THE BOT WILL CRASH, SO PLEASE DON'T OVERLOOK THIS!**  
+I will be working on a fix soon, its just gonna require a rework of the getDBInfo function, and I just don't have time for that right now.
+hopefully by the end of the week it will be fixed!
+
 # What needs some work?
 - The code is kinda messy as I coded this in less then 4 hours, so code cleanup
 
