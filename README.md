@@ -13,20 +13,18 @@ In it's current state:
 - once the bot has gotten all the information from the database, it will use a2s to query servers
 - finally, it will take all the information, and embed it in a discord embed message and send it to the channel of your choosing (Discord Channel ID's are held in the DB)
 - The bot automatically sizes servers array, so you can use servers[row_index][column_index] to get the required information!
+- Fixed the issue where bot crashes on server being down.
+- There is now a config, so no need to mess with bot.py code*
+- The bot automatically refreshes the embeds! (Default is 60 seconds, you can change this in the config!)
+- the bot now has the ability to edit messages, so no more deleting old embeds!
 
 # What needs some work?
 - The code is kinda messy as I coded this in less then 4 hours, so code cleanup
-- In the event of a server being down, the bot will crash as I have no error detection implemented
-- This is only for Source Queries, Minecraft is not included! I will work on this at some point!
 
 # What's next?
-I want to to add a config so you can config everything to your liking without messing with the actual code.
+This is only for Source Queries, Minecraft is not included! I will work on this at some point!
 
 I want to add player graphs, I think I can use MatPlotLib to acheive this, but I don't how to store the player info. I don't want to store it in the database, as I would like to keep that as clean as possible, but I think that may be my only option...
-
-I want to auto update every 5(?) minutes or so, so I will need to figure out a refresh function.
-
-Currently the bot will just create a new message, I want to just edit the last message sent by the bot.
 
 ## Supported Games
 
