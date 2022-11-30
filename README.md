@@ -13,7 +13,7 @@ In it's current state:
 - once the bot has gotten all the information from the database, it will use a2s to query servers
 - finally, it will take all the information, and embed it in a discord embed message and send it to the channel of your choosing (Discord Channel ID's are held in the DB)
 - The bot automatically sizes servers array, so you can use servers[row_index][column_index] to get the required information!
-- Fixed the issue where bot crashes on server being down.
+- Fixed the issue where the bot crashes on server being down.
 - There is now a config, so no need to mess with bot.py code*
 - The bot automatically refreshes the embeds! (Default is 60 seconds, you can change this in the config!)
 - the bot now has the ability to edit messages, so no more deleting old embeds!
