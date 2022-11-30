@@ -46,6 +46,6 @@ This bot is using:<br>
 <a href="https://github.com/Yepoleb/python-a2s">python-a2s</a> - pip3 install python-a2s<br>
 <a href="https://mariadb.com/resources/blog/how-to-connect-python-programs-to-mariadb/">mariaDB</a> - pip3 install mariadb
 
-All information is held in a localhost database (you can edit the database ip, port, username, password in the script, will probably make this a global variable at some point), so all you really need to do is add the correct information into the database and run the script with `python bot.py` and your done!
+All information is held in a localhost database (you can edit the database ip, port, username, password in `config.py`, so all you really need to do is add the correct information into the database and run the script with `python bot.py` and your done!
 
 If you use anything in my script, give me credit i guess, i don't care...
