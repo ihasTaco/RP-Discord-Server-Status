@@ -61,7 +61,7 @@ All the configuration is done in the config.py! NOT THE CONFIG.INI, the config.i
 I tried to add as much information and configuration to the config.py as possible, so if you read most of it you should be good, also you can configure pretty much everything on the bot, like to the point where it only shows the title and thats it.
 
 # Bot Showcase
-<img src="https://media.discordapp.net/attachments/917631521219813417/1048275443230457916/image.png">
-<img src="https://media.discordapp.net/attachments/917631521219813417/1048275557630083242/image.png">
-<img src="https://media.discordapp.net/attachments/917631521219813417/1048275684113526804/image.png">
+<img src="https://media.discordapp.net/attachments/917631521219813417/1048275443230457916/image.png" style="width: 250px">
+<img src="https://media.discordapp.net/attachments/917631521219813417/1048275557630083242/image.png" style="width: 250px">
+<img src="https://media.discordapp.net/attachments/917631521219813417/1048275684113526804/image.png" style="width: 250px">
 If you use anything in my script, give me credit i guess, i don't care...
