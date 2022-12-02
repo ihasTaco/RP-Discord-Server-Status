@@ -1,7 +1,7 @@
 # RP-Discord-Server-Status
-Royal Productions Server Status is an Open-Source Discord bot made in Discord.py to query game servers!
+Royal Productions Server Status is an Open-Source Discord bot made in Discord.py to query Source and Minecraft game servers!
 
-Royal Productions Server Status is bot used and made by <a href="https://discord.gg/royal-productions-360541835371741185">Royal Productions</a>, after my favorite status bot switched teams and started charging people who have more then 5 servers (nothing against them or the fact that they are charging users, they are a great team that needs to make money!), I decided to make my own.
+Royal Productions Server Status is a bot used and made by <a href="https://discord.gg/royal-productions-360541835371741185">Royal Productions</a>, after my favorite status bot switched teams and started charging people who have more then 5 servers (nothing against them or the fact that they are charging users, they are a great team that needs to make money!), I decided to make my own.
 
 <a href="https://github.com/ihasTaco/RP-Discord-Server-Status#supported-games">Supported Game Servers</a><br>
 <a href="https://github.com/ihasTaco/RP-Discord-Server-Status#bot-showcase">Bot Showcase</a>
@@ -13,6 +13,10 @@ Tick the `Add Python to PATH` and install<br>
 <a href="https://github.com/Yepoleb/python-a2s">python-a2s</a> - pip3 install python-a2s<br>
 <a href="https://github.com/py-mine/mcstatus">mcstatus</a> - pip3 install mcstatus<br>
 <a href="https://mariadb.com/resources/blog/how-to-connect-python-programs-to-mariadb/">mariaDB</a> - pip3 install mariadb
+
+-- Optional -- (but still kinda required)<br>
+<a href="https://www.apachefriends.org/">Xampp</a> - Used for database (Alternatively, you can also use, <a href="https://www.wampserver.com/en/">WampServer</a>, and other alternatives)<br>
+<a href="https://www.heidisql.com/">HeidiSQL</a> - For accessing database, you could use phpmysql, but heidi is easier to use.<br>
 
 # What does this bot do?
 Before making this bot, I had a couple of features that I wanted to implement, before we start using it in Royal Productions.<br>
