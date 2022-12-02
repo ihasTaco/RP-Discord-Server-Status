@@ -8,7 +8,7 @@ Royal Productions Server Status is bot used and made by <a href="https://discord
 # Requirements
 <a href="https://www.python.org/downloads/">Python</a><br>
 Tick the `Add Python to PATH` and install<br>
-<a href="[https://www.python.org/downloads/](https://discord.com/developers/docs/intro)">Discord.py</a> - pips install discord.py<br>
+<a href="https://discord.com/developers/docs/intro">Discord.py</a> - pips install discord.py<br>
 <a href="https://github.com/Yepoleb/python-a2s">python-a2s</a> - pip3 install python-a2s<br>
 <a href="https://github.com/py-mine/mcstatus">mcstatus</a> - pip3 install mcstatus<br>
 <a href="https://mariadb.com/resources/blog/how-to-connect-python-programs-to-mariadb/">mariaDB</a> - pip3 install mariadb
