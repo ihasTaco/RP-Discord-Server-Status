@@ -5,6 +5,8 @@ Royal Productions Server Status is bot used and made by <a href="https://discord
 
 <img src="https://media.discordapp.net/attachments/915868461165592626/1047948820815814666/image.png" style="width: 500px;">
 
+<a href="https://github.com/ihasTaco/RP-Discord-Server-Status#supported-games">Supported Game Servers</a>
+
 # Requirements
 <a href="https://www.python.org/downloads/">Python</a><br>
 Tick the `Add Python to PATH` and install<br>
