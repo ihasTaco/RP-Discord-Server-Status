@@ -1,7 +1,7 @@
 # RP-Discord-Server-Status
 Royal Productions Server Status is an Open-Source Discord bot made in Discord.py to query game servers!
 
-Royal Productions Server Status is bot used and made by <a href="https://discord.gg/royal-productions-360541835371741185">Royal Productions</a>, after my favorite status bot switched teams and started charging people who have more then 5 servers (nothing against them or the fact that they are chargin, they are a great team that needs to make money!), I decided to make my own.
+Royal Productions Server Status is bot used and made by <a href="https://discord.gg/royal-productions-360541835371741185">Royal Productions</a>, after my favorite status bot switched teams and started charging people who have more then 5 servers (nothing against them or the fact that they are charging users, they are a great team that needs to make money!), I decided to make my own.
 
 <img src="https://media.discordapp.net/attachments/915868461165592626/1047948820815814666/image.png" style="width: 500px;">
 
