@@ -60,7 +60,8 @@ All the information is held in a localhost database, (like IP's, Ports, Discord 
 All the configuration is done in the config.py! NOT THE CONFIG.INI, the config.ini is overwritten every startup but what's in the config.py file
 I tried to add as much information and configuration to the config.py as possible, so if you read most of it you should be good, also you can configure pretty much everything on the bot, like to the point where it only shows the title and thats it.
 
-<img src="https://media.discordapp.net/attachments/915868461165592626/1048043319982301255/image.png">
-
-
+# Bot Showcase
+<img src="https://media.discordapp.net/attachments/917631521219813417/1048275443230457916/image.png">
+<img src="https://media.discordapp.net/attachments/917631521219813417/1048275557630083242/image.png">
+<img src="https://media.discordapp.net/attachments/917631521219813417/1048275684113526804/image.png">
 If you use anything in my script, give me credit i guess, i don't care...
