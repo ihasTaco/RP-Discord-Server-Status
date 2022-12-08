@@ -21,7 +21,7 @@ Tick the `Add Python to PATH` and install<br>
 <a href="https://www.heidisql.com/">HeidiSQL</a> - For accessing database, you could use phpmysql, but heidi is easier to use.<br>
 
 # Known Issues
-As of v2.0 there will be a bug in the embed with the new format that I am working on,
+As of v1.2 there will be a bug in the embed with the new format that I am working on,
 I've added a new field for server location, the default value for that is ':flag_us: US'<br>
 I have NOT made a way to configure that as of yet, but this will be an option soon in the database, 
 so you can configure each individual server for different locations 
