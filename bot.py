@@ -42,6 +42,7 @@ async def send(x, exception):
     serverTitle = db_arr[0][5]
     channel_ID = client.get_channel(db_arr[0][6])
     message_ID = db_arr[0][7]
+    server_loc = db_arr[0][8]
 
     if serverstatus.debug == True:
         print("%sServer IP:%s %s" %(serverstatus.colors('Info'), serverstatus.colors('Normal'), serverIP))
@@ -95,8 +96,8 @@ async def send(x, exception):
         if serverstatus.showDirectConnectInEmbed == True:
             embedVar.add_field(name="Connection:", value="`%s:%s`" % (serverIP, serverPort), inline=True)
 
-        if serverstatus.showCurrentPlayersInEmbed == True:
-            embedVar.add_field(name="Location:", value=":flag_us: US", inline=True)
+        if serverstatus.showServerLocation == True:
+            embedVar.add_field(name="Location:", value=server_loc, inline=True)
 
         if serverstatus.showGameInEmbed == True:
             embedVar.add_field(name="Game:", value="%s" %serverGame, inline=True)
@@ -155,8 +156,8 @@ async def send(x, exception):
         if serverstatus.showDirectConnectInEmbed == True:
             embedVar.add_field(name="Connection:", value="`%s:%s`" % (serverIP, serverPort), inline=True)
 
-        if serverstatus.showCurrentPlayersInEmbed == True:
-            embedVar.add_field(name="Location:", value=":flag_us: US", inline=True)
+        if serverstatus.showServerLocation == True:
+            embedVar.add_field(name="Location:", value=server_loc, inline=True)
 
         if serverstatus.showGameInEmbed == True:
             embedVar.add_field(name="Game:", value="%s" %db_arr[0][4], inline=True)

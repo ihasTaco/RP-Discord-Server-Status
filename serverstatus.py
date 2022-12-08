@@ -33,28 +33,34 @@ def colors(x):
     if x == 'Info':
         return '\033[0;33m'
 
+# Token Settings
 token = None
-debug = None
+# Database Settings
 dbHost = None
 dbUser = None
 dbPassword = None
 dbDatabase = None
 dbTable = None
 db = None
-embedColor = None
+
+# Debug Settings
+debug = None
+
+# General Embed Settings
+refreshTime = None
 thumbnailImage = None
-footerNote = None
-footerImage = None
-showPlayerNamesInEmbed = None
+embedColor = None
+useServerNameAsTitle = None
 showDirectConnectInEmbed = None
+showServerLocation = None
 showGameInEmbed = None
 showMapInEmbed = None
 showCurrentPlayersInEmbed = None
-showPlayerGraph = None
 showSteamConnectionInEmbed = None
-useServerNameAsTitle = None
+showPlayerNamesInEmbed = None
 showTimestamp = None
-refreshTime = None
+footerNote = None
+footerImage = None
 
 # Graph Settings
 graphEnabled = None
@@ -123,10 +129,10 @@ def updateConfig():
     global embedColor
     global showPlayerNamesInEmbed
     global showDirectConnectInEmbed
+    global showServerLocation
     global showGameInEmbed
     global showMapInEmbed
     global showCurrentPlayersInEmbed
-    global showPlayerGraph
     global showSteamConnectionInEmbed
     global useServerNameAsTitle
     global showTimestamp
@@ -157,14 +163,13 @@ def updateConfig():
     dbPassword = config['DATABASE']['password']
     dbDatabase = config['DATABASE']['database']
     dbTable = config['DATABASE']['table']
-    #embedColor = '0x' + config['GENERAL']['embedColor']
     embedColor = config['GENERAL']['embedColor']
     showPlayerNamesInEmbed = bool(config['GENERAL']['showplayernamesinembed'] == 'True')
     showDirectConnectInEmbed = bool(config['GENERAL']['showDirectConnectInEmbed'] == 'True')
+    showServerLocation = bool(config['GENERAL']['showServerLocation'] == 'True')
     showGameInEmbed = bool(config['GENERAL']['showGameInEmbed'] == 'True')
     showMapInEmbed = bool(config['GENERAL']['showMapInEmbed'] == 'True')
     showCurrentPlayersInEmbed = bool(config['GENERAL']['showCurrentPlayersInEmbed'] == 'True')
-    showPlayerGraph = bool(config['GENERAL']['showPlayerGraph'] == 'True')
     showSteamConnectionInEmbed = bool(config['GENERAL']['showSteamConnectionInEmbed'] == 'True')
     useServerNameAsTitle = bool(config['GENERAL']['useservernameastitle'] == 'True')
     showTimestamp = bool(config['GENERAL']['showtimestamp'] == 'True')
@@ -221,8 +226,8 @@ def updateConfig():
         print("%sfooterNote:%s %s" % (colors('Info'), colors('Normal'), footerNote))
         print("%sfooterImage:%s %s" % (colors('Info'), colors('Normal'), footerImage))
         print("%sshowPlayerNamesInEmbed:%s %s" % (colors('Info'), colors('Normal'), showPlayerNamesInEmbed))
-        print("%sshowPlayerGraph:%s %s" % (colors('Info'), colors('Normal'), showPlayerGraph))
         print("%sshowDirectConnectInEmbed:%s %s" % (colors('Info'), colors('Normal'), showDirectConnectInEmbed))
+        print("%sshowServerLocation:%s %s" % (colors('Info'), colors('Normal'), showServerLocation))
         print("%sshowGameInEmbed:%s %s" % (colors('Info'), colors('Normal'), showGameInEmbed))
         print("%sshowMapInEmbed:%s %s" % (colors('Info'), colors('Normal'), showMapInEmbed))
         print("%sshowCurrentPlayersInEmbed:%s %s" % (colors('Info'), colors('Normal'), showCurrentPlayersInEmbed))
@@ -285,7 +290,7 @@ class database:
         results = cursor.fetchall()
 
         # Fill servers array with 0's to appropriate sizes
-        w, h = 8, 1
+        w, h = 9, 1
         servers = [[0 for a in range(w)] for b in range(h)] 
         # start assigning results to servers array
         for y in results:

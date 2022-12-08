@@ -2,7 +2,7 @@ import configparser
 config = configparser.ConfigParser()
 
 config['TOKEN'] = {
-    'botToken': 'Change Me'
+    'botToken': 'MTA0NjYxMTQzNDEzMTQ0Mzg0Ng.Ggfvvx.RIjmhvctBsddyV_ORpkMhY7ffvW37IrdufpL9g'
 }
 
 config['DATABASE'] = {
@@ -59,10 +59,10 @@ config['GENERAL'] = {
     # If True, These specific fields will be enabled and show up in the embed
     # If False, These specific fields will be disabled and will not show up in embed
     'showDirectConnectInEmbed': 'True',
+    'showServerLocation': 'True',
     'showGameInEmbed': 'True',
     'showMapInEmbed': 'True',
     'showCurrentPlayersInEmbed': 'True',
-    'showPlayerGraph': 'True',
     'showSteamConnectionInEmbed': 'True',
     'showPlayerNamesInEmbed': 'True',
     # Boolean
