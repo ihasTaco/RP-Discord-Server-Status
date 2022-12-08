@@ -20,13 +20,6 @@ Tick the `Add Python to PATH` and install<br>
 <a href="https://www.apachefriends.org/">Xampp</a> - Used for database (Alternatively, you can also use, <a href="https://www.wampserver.com/en/">WampServer</a>, and other alternatives)<br>
 <a href="https://www.heidisql.com/">HeidiSQL</a> - For accessing database, you could use phpmysql, but heidi is easier to use.<br>
 
-# Known Issues
-As of v1.2 there will be a bug in the embed with the new format that I am working on,
-I've added a new field for server location, the default value for that is ':flag_us: US'<br>
-I have NOT made a way to configure that as of yet, but this will be an option soon in the database, 
-so you can configure each individual server for different locations 
-if you want to change this, use ctrl+f in bot.py and search for ':flag_us: US' and change that to your country/server country (:flag_us: is a discord emoji, so just find your flags emoji in discord)
-
 # What does this bot do?
 Before making this bot, I had a couple of features that I wanted to implement, before we start using it in Royal Productions.<br>
 :white_check_mark: | Query all of our servers (mostly source games, but also minecraft)<br>
