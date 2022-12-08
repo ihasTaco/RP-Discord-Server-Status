@@ -13,6 +13,8 @@ Tick the `Add Python to PATH` and install<br>
 <a href="https://github.com/Yepoleb/python-a2s">python-a2s</a> - pip3 install python-a2s<br>
 <a href="https://github.com/py-mine/mcstatus">mcstatus</a> - pip3 install mcstatus<br>
 <a href="https://mariadb.com/resources/blog/how-to-connect-python-programs-to-mariadb/">mariaDB</a> - pip3 install mariadb
+<a href="https://numpy.org/">numpy</a> - pip3 install numpy
+<a href="https://matplotlib.org/">matplotlib</a> - pip3 install matplotlib
 
 -- Optional -- (but still kinda required)<br>
 <a href="https://www.apachefriends.org/">Xampp</a> - Used for database (Alternatively, you can also use, <a href="https://www.wampserver.com/en/">WampServer</a>, and other alternatives)<br>
@@ -28,13 +30,10 @@ Before making this bot, I had a couple of features that I wanted to implement, b
 :white_check_mark: | Easy to configure and change settings<br>
 :white_check_mark: | Automatically update settings, without bot restart<br>
 :white_check_mark: | Decent debug setting<br>
-:x: | Show player graph<br>
+:white_check_mark: | Show player graph<br>
 
 # What needs some work?
-- Eventually I will need to rewrite the code, this is literally one of the first builds where *EVERYTHING* is in and working great.
-
-# What's next?
-Eventually, I would like to add player graphs, to show player trends and stuff like that, but whenever I rewrite the code I can work on that.
+- Mostly everything is done, at this point I will be looking at other bots and trying to implement features from those bots
 
 # Supported Games
 
