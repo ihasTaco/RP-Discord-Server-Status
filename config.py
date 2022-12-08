@@ -2,7 +2,7 @@ import configparser
 config = configparser.ConfigParser()
 
 config['TOKEN'] = {
-    'botToken': 'MTA0NjYxMTQzNDEzMTQ0Mzg0Ng.Ggfvvx.RIjmhvctBsddyV_ORpkMhY7ffvW37IrdufpL9g'
+    'botToken': 'Change Me'
 }
 
 config['DATABASE'] = {
