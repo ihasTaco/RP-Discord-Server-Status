@@ -6,7 +6,7 @@ Royal Productions Server Status is a bot used and made by <a href="https://disco
 <a href="https://github.com/ihasTaco/RP-Discord-Server-Status#supported-games">Supported Game Servers</a><br>
 <a href="https://github.com/ihasTaco/RP-Discord-Server-Status#bot-showcase">Bot Showcase</a>
 
-# Requirements
+# Requirements (Dependencies)
 <a href="https://www.python.org/downloads/">Python</a><br>
 Tick the `Add Python to PATH` and install<br>
 <a href="https://discord.com/developers/docs/intro">Discord.py</a> - pip3 install discord<br>
@@ -66,4 +66,5 @@ I tried to add as much information and configuration to the config.py as possibl
 <img src="https://media.discordapp.net/attachments/917631521219813417/1048275443230457916/image.png" style="width: 250px">
 <img src="https://media.discordapp.net/attachments/917631521219813417/1048275557630083242/image.png" style="width: 250px">
 <img src="https://media.discordapp.net/attachments/917631521219813417/1048275684113526804/image.png" style="width: 250px">
-If you use anything in my script, give me credit i guess, i don't care...
+
+If you use anything in my script, give me credit I guess, I don't care...
