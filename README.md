@@ -12,9 +12,9 @@ Tick the `Add Python to PATH` and install<br>
 <a href="https://discord.com/developers/docs/intro">Discord.py</a> - pip3 install discord<br>
 <a href="https://github.com/Yepoleb/python-a2s">python-a2s</a> - pip3 install python-a2s<br>
 <a href="https://github.com/py-mine/mcstatus">mcstatus</a> - pip3 install mcstatus<br>
-<a href="https://mariadb.com/resources/blog/how-to-connect-python-programs-to-mariadb/">mariaDB</a> - pip3 install mariadb
-<a href="https://numpy.org/">numpy</a> - pip3 install numpy
-<a href="https://matplotlib.org/">matplotlib</a> - pip3 install matplotlib
+<a href="https://mariadb.com/resources/blog/how-to-connect-python-programs-to-mariadb/">mariaDB</a> - pip3 install mariadb<br>
+<a href="https://numpy.org/">numpy</a> - pip3 install numpy<br>
+<a href="https://matplotlib.org/">matplotlib</a> - pip3 install matplotlib<br>
 
 -- Optional -- (but still kinda required)<br>
 <a href="https://www.apachefriends.org/">Xampp</a> - Used for database (Alternatively, you can also use, <a href="https://www.wampserver.com/en/">WampServer</a>, and other alternatives)<br>
