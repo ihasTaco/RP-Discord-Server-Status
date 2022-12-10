@@ -1,39 +1,68 @@
 # RP-Discord-Server-Status
-Royal Productions Server Status is an Open-Source Discord bot made in Discord.py to query Source and Minecraft game servers!
 
-Royal Productions Server Status is a bot used and made by <a href="https://discord.gg/royal-productions-360541835371741185">Royal Productions</a>, after my favorite status bot switched teams and started charging people who have more then 5 servers (nothing against them or the fact that they are charging users, they are a great team that needs to make money!), I decided to make my own.
+Server Status is an open-source Discord bot that allows users to quickly and easily view the status of their Source and Minecraft game servers. With customizable settings and live updates, this bot makes it easy for users to monitor the performance and activity levels of their servers in real-time. Created by Royal Productions, this bot is free to use and can be modified to fit the unique needs of any server.
 
-<a href="https://github.com/ihasTaco/RP-Discord-Server-Status#supported-games">Supported Game Servers</a><br>
-<a href="https://github.com/ihasTaco/RP-Discord-Server-Status#bot-showcase">Bot Showcase</a>
+Here are some features that this bot offers!
+ - Offers users a high degree of configurability, giving them the ability to tailor the bot's behavior and performance to their specific requirements and preferences.
+ - Enables users to make live changes to the bot's configuration without interrupting its operation, making it easier for users to adjust the bot's settings and performance on the fly.
+ - Retrieves data about the server's name, map, game mode, and current players, providing users with essential information about the server's current state and activity levels.
+ - Displays the server's name, map, game mode, and current players, providing users with essential information about the server's status and activity levels.
+ - Provides an up-to-date list of the players in the server, giving users valuable information about the server's population and activity levels.
+ - Provides an easy-to-understand graph that shows the number of players on the server over time, helping users understand the server's peak and off-peak times.
+ - Enables users to set the frequency of server updates, allowing them to determine how often the bot checks the server's status and activity levels.
 
-# Requirements (Dependencies)
-<a href="https://www.python.org/downloads/">Python</a><br>
-Tick the `Add Python to PATH` and install<br>
-<a href="https://discord.com/developers/docs/intro">Discord.py</a> - pip3 install discord<br>
-<a href="https://github.com/Yepoleb/python-a2s">python-a2s</a> - pip3 install python-a2s<br>
-<a href="https://github.com/py-mine/mcstatus">mcstatus</a> - pip3 install mcstatus<br>
-<a href="https://mariadb.com/resources/blog/how-to-connect-python-programs-to-mariadb/">mariaDB</a> - pip3 install mariadb<br>
-<a href="https://numpy.org/">numpy</a> - pip3 install numpy<br>
-<a href="https://matplotlib.org/">matplotlib</a> - pip3 install matplotlib<br>
+[Supported Game Servers](https://github.com/ihasTaco/RP-Discord-Server-Status#supported-games)<br>
+[Bot Showcase](https://github.com/ihasTaco/RP-Discord-Server-Status#bot-showcase)
 
--- Optional -- (but still kinda required)<br>
-<a href="https://www.apachefriends.org/">Xampp</a> - Used for database (Alternatively, you can also use, <a href="https://www.wampserver.com/en/">WampServer</a>, and other alternatives)<br>
-<a href="https://www.heidisql.com/">HeidiSQL</a> - For accessing database, you could use phpmysql, but heidi is easier to use.<br>
+## Getting Started
+### Prerequisites
+Install Python 3.8 or later if it is not already installed on your system. You can download and install Python from the [official Python website](https://www.python.org/downloads/).
 
-# What does this bot do?
-Before making this bot, I had a couple of features that I wanted to implement, before we start using it in Royal Productions.<br>
-:white_check_mark: | Query all of our servers (mostly source games, but also minecraft)<br>
-:white_check_mark: | Get Most (if not all) info that <a href="https://discord.gg/VQvWHQcGqY" title="Check out their discord as their bot is actually pretty good, and it has a Panel to configure servers!">Nexeum Studio's</a> bot gives access to.<br>
-:white_check_mark: | Show Current Players in the server<br>
-:white_check_mark: | Have a decent looking UI (Thanks Discord, for making it easy)<br>
-:white_check_mark: | Be able to control the refresh rate of the servers<br>
-:white_check_mark: | Easy to configure and change settings<br>
-:white_check_mark: | Automatically update settings, without bot restart<br>
-:white_check_mark: | Decent debug setting<br>
-:white_check_mark: | Show player graph<br>
+Create a new Discord bot by following the instructions on the [Discord Developer Portal](https://discord.com/developers/docs/intro). You will need to create/log into a Discord account and create a new application on the Developer Portal to create your bot.
 
-# What needs some work?
-- Mostly everything is done, at this point I will be looking at other bots and trying to implement features from those bots
+### Installing the Bot
+
+Install the required packages for your bot by running the following command in a terminal or command prompt: ```pip install -r requirements.txt``` This will install all of the required packages for your bot, including discord.py, python-a2s, mcstatus, mariaDB, matplotlib and numpy.
+
+Download the source code for your bot from GitHub using your perfered method and extract it to a new directory on your system (perferably somewhere easy to access).
+
+Open the config.py file in a text editor and enter the required information for your bot, including the bot's token, database information, and customize the bot with all the available settings (don't worry these are all extremely documented)
+
+### Running the Bot
+
+Use: ```cd path/to/your/bot``` to point your terminal or command prompt to the correct location
+Run your bot by running the bot.py file in a terminal or command prompt using the following command: ```python bot.py``` This will start your bot and connect it to the Discord API, allowing users to see your sexy new Server Status bot.
+
+[Invite your bot](https://discordpy.readthedocs.io/en/stable/discord.html) to your Discord server by following the instructions on the Discord Developer Portal. Once your bot is added to your server, users will be able to see your servers information in real time.
+
+To manage servers with your bot, you can use the built in commands: ```/serveradd, /serverdel, & /serverlist ``` or you can manage them in the database!
+
+And thats it easy as that, your done!
+
+### Optional Tools
+While these aren't necessary, they are highly recommended!<br>
+[Xampp](https://www.apachefriends.org/) - (This is a required tool but you have options!) Used for database (Alternatively, you can also use, [WampServer](https://www.wampserver.com/en/), and other alternatives)<br>
+[HeidiSQL](https://www.heidisql.com/) - For accessing database, you could use phpmysql, but heidi is easier to use.<br>
+
+## Command Usage
+There are some new commands that I would like to bring attention to, that wasn't in the original plan!<br>
+Added 3 new commands to the bot: /serveradd, /serverdel, and /serverlist
+
+```/serveradd``` - this will take in 7 arguments ip, port, query port, game name, server name, channel ID, and the location.
+I will explain some not so obvious arguments here:
+ - Game Name - This is what will be displayed in the 'Game' field in the embed.
+ - Server Name - While similar to the Game Name, This will be displayed as the embed title, IF you chose to enable that setting.
+ - Channel ID - Where the embed will be sent to.
+ - Location - This can be whatever, but default is an emoji flag and 2 letter country code (i.e. :flag_us: US)
+
+```/serverdel``` - This will take 1 argument, DB Index<br>
+When the server is deleted from the database the ID will automatically be reset to 0 so any new servers will be added to the next available ID
+
+```/serverlist``` - this takes no arguments, but will list out all of the servers in the database.<br>
+It will display this information for each server:
+ - DB Index - This is the index in the database that you can use to delete a server
+ - Server Name - NOT the game name, as hopefully, the server name will be a little more detailed than the game name.
+ - Connection - This will show the IP:Port of the server for extra clarification on which server is which.
 
 # Supported Games
 
@@ -53,18 +82,11 @@ AppID | Game | Works
 346110 | [Ark: Survival Evolved](http://store.steampowered.com/app/252490/) | :white_check_mark: |
 ~ | [Minecraft](http://www.minecraft.net/) | :white_check_mark: |
 
-
-# How to use this
-I am not providing hosting! So you will need to, <a href="https://discordpy.readthedocs.io/en/stable/discord.html">Set up</a> a <a href="https://discord.com/developers/applications">Bot Application on Discord</a> and make sure you have MESSAGE CONTENT INTENT enabled under bots
-
-All the information is held in a localhost database, (like IP's, Ports, Discord Channel ID's, etc.) so make sure you change those before running the script on your public server!
-
-All the configuration is done in the config.py! NOT THE CONFIG.INI, the config.ini is overwritten every startup but what's in the config.py file
-I tried to add as much information and configuration to the config.py as possible, so if you read most of it you should be good, also you can configure pretty much everything on the bot, like to the point where it only shows the title and thats it.
-
 # Bot Showcase
 <img src="https://media.discordapp.net/attachments/1046993037240303728/1050509951325458482/Screenshot_2022-12-08_132930.png" style="width: 250px">
 <img src="https://media.discordapp.net/attachments/1046993037240303728/1050509951690354718/Screenshot_2022-12-08_133027.png" style="width: 250px">
 <img src="https://media.discordapp.net/attachments/1046993037240303728/1050509952055267418/Screenshot_2022-12-08_133103.png" style="width: 250px">
+<img src="https://media.discordapp.net/attachments/1046993056227930173/1050982150792548352/Commands.png" style="width: 250px">
+<img src="https://media.discordapp.net/attachments/1046993056227930173/1050982189099130920/serverlist_screenshot.png" style="width: 250px">
 
 If you use anything in my script, give me credit I guess, I don't care...
