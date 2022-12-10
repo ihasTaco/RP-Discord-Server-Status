@@ -275,7 +275,7 @@ class database:
             else:
                 print("%sSuccessfully found %s rows! %s" % (colors('Success'), len(results), colors('Normal')))
 
-        return len(results)
+        return results
 
     def query(db_index):
         global debug
@@ -301,25 +301,75 @@ class database:
 
         if debug == True:
             print('%sResults: %s\n%s' %(colors('Info'), colors('Normal'), servers))
+
         return servers
 
-        
-    def submit(message, x):
+    class submit:
+        def channel(message, x):
+            global debug
+            global db
+            global dbTable
+            if debug == True:
+                print("%s\n#######################################\n#%s    Send Message Info to Database    %s#\n#######################################%s" % (colors('SubTitle'), colors('Normal'), colors('SubTitle'), colors('Normal')))
+            message = str(message).split()
+            message = str(message[1]).split('id=')
+
+            if debug == True:
+                print("%sMessage ID:%s %s" % (colors('Info'), colors('Normal'), message[1]))
+            cursor = db.cursor()
+            cursor.execute('UPDATE server_info SET messageID = \"%s\" WHERE ID = \"%s\"' % (str(message[1]), x))
+            db.commit()
+            if debug == True:
+                print("%sMessage ID Sent to Database Successfully!%s" % (colors('Success'), colors('Normal')))
+
+        def server(ip, port, qport, game, name, channel_id, location):
+            global debug
+            global db
+            global dbTable
+            if debug == True:
+                print("%s\n#######################################\n#%s    Send Server Info to Database    %s#\n#######################################%s" % (colors('SubTitle'), colors('Normal'), colors('SubTitle'), colors('Normal')))
+            if debug == True:
+                print("%sIP:%s %s" % (colors('Info'), colors('Normal'), ip))
+                print("%sPort:%s %s" % (colors('Info'), colors('Normal'), port))
+                print("%sQuery Port:%s %s" % (colors('Info'), colors('Normal'), qport))
+                print("%sGame:%s %s" % (colors('Info'), colors('Normal'), game))
+                print("%sServer Name:%s %s" % (colors('Info'), colors('Normal'), name))
+                print("%sChannel ID:%s %s" % (colors('Info'), colors('Normal'), channel_id))
+                print("%sServer Location:%s %s" % (colors('Info'), colors('Normal'), location))
+            cursor = db.cursor()
+            cursor.execute('INSERT INTO server_info (IP, Port, Query_Port, Game, Server_Name, ChannelID, server_location) VALUES (\"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\")' % (ip, port, qport, game, name, channel_id, location))
+            db.commit()
+            if debug == True:
+                print("%sServer Info Sent to Database Successfully!%s" % (colors('Success'), colors('Normal')))
+
+    def delete(db_index: int):
         global debug
         global db
         global dbTable
-        if debug == True:
-            print("%s\n#######################################\n#%s    Send Message Info to Database    %s#\n#######################################%s" % (colors('SubTitle'), colors('Normal'), colors('SubTitle'), colors('Normal')))
-        message = str(message).split()
-        message = str(message[1]).split('id=')
 
-        if debug == True:
-            print("%sMessage ID:%s %s" % (colors('Info'), colors('Normal'), message[1]))
+        if debug:
+            print("%s\n#######################################\n#%s          Delete Server              %s#\n#######################################%s" % (colors('SubTitle'), colors('Normal'), colors('SubTitle'), colors('Normal')))
+
+        # Create a cursor to execute the SQL query
         cursor = db.cursor()
-        cursor.execute('UPDATE server_info SET messageID = \"%s\" WHERE ID = \"%s\"' % (str(message[1]), x))
+        # Execute the DELETE query using the `db_index`
+        cursor.execute("DELETE FROM %s WHERE ID=%s" % (dbTable, db_index))
+        # Save the changes to the database
         db.commit()
-        if debug == True:
-            print("%sMessage ID Sent to Database Successfully!%s" % (colors('Success'), colors('Normal')))
+
+        if debug:
+            print("%sSuccessfully deleted server with index %s from the database%s" % (colors('Success'), db_index, colors('Normal')))
+    def reset_auto_increment():
+        global debug
+        global db
+        global dbTable
+        print('reset')
+        cursor = db.cursor()
+
+        sql = f"ALTER TABLE {dbTable} AUTO_INCREMENT = 0"
+        cursor.execute(sql)
+
+        db.commit()
 
 class server:
     def minecraft(db_arr, x):
@@ -473,7 +523,7 @@ class graph:
         global players_arr
         global timestamp_arr
 
-        w, h = 288, database.initial()
+        w, h = 288, len(database.initial())
         timestamp_arr = [[datetime.today() - timedelta(days = 1) for a in range(w)] for b in range(h)]
         players_arr = [[0 for a in range(w)] for b in range(h)]
 

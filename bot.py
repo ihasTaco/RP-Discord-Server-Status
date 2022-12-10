@@ -1,5 +1,8 @@
 import discord
 from discord.utils import get
+from discord import app_commands
+from discord.ext import commands
+from discord.abc import Snowflake
 import time 
 import functools
 import typing
@@ -18,6 +21,7 @@ cInfo = serverstatus.colors('Info')
 intents = discord.Intents.default()
 intents.message_content = True
 client = discord.Client(intents=intents)
+tree = app_commands.CommandTree(client)
 
 serverstatus.updateConfig()
 serverstatus.connectDB()
@@ -215,20 +219,21 @@ def wait(a):                                                                #
 #############################################################################
 
 timesRun = 1
-
 @client.event
 async def on_ready():
     global timesRun
     if serverstatus.debug == True:
         print("%sBot is ready!%s" %(cSuccess, cNormal))
-        #await serverstatus.database.query(9)
+
+    await tree.sync(guild=discord.Object(id=775165767398195200))
+
     while True:
-        #try:
+        try:
             serverstatus.updateConfig()
             index = 0
 
             # Query database for rows in database
-            numOfServers = serverstatus.database.initial()
+            numOfServers = len(serverstatus.database.initial())
 
             while index <= numOfServers - 1:
                 if serverstatus.debug == True:
@@ -250,8 +255,72 @@ async def on_ready():
             # Prevents user from using ctrl+c to exit script, you need to wait till after the wait function is done
             await wait(serverstatus.refreshTime)
             timesRun += 1
-        #except:
-        #    on_ready()
+        except:
+            await on_ready()
 
+@tree.command(name="serveradd", description="Add a Server to the database, so Server Status can query it!", guild = discord.Object(id = 775165767398195200))
+@app_commands.describe(ip=" String | IP of the server")
+@app_commands.describe(port=" Integer | Connection Port")
+@app_commands.describe(queryport=" Integer | Port used to query server")
+@app_commands.describe(game=" String | Name of the game | Example: 'Unturned'")
+@app_commands.describe(server_name=" String | The name of the server. | Example: 'Unturned | Elver | PvE'")
+@app_commands.describe(channel_id=" Integer | The Channel ID to send the panel to.")
+@app_commands.describe(server_location=" String | Example: :flag_us: US")
+async def self(interaction: discord.Interaction, ip: str, port: int, queryport: int, game: str, server_name: str, channel_id: str, server_location: str): 
+    serverstatus.database.submit.server(ip, port, queryport, game, server_name, channel_id, server_location)   
+    await interaction.response.send_message(f"Successfully Added {server_name} to the database!", ephemeral=True)
+
+@tree.command(name="serverlist", description="Add a Server to the database, so Server Status can query it!", guild = discord.Object(id = 775165767398195200))
+async def listservers(interaction: discord.Interaction): 
+    servers = serverstatus.database.initial()
+
+    # Create a list to hold the Embed objects.
+    embeds = []
+
+    # Set the starting index and number of servers per page.
+    index = 0
+    servers_per_page = 7
+
+    # Continue adding Embed objects to the list until all of the server
+    # information has been processed.
+    while index < len(servers):
+        # If the current index is the first page, set the title of the
+        # Embed object. Otherwise, leave it blank.
+        if index == 0:
+            embed = discord.Embed(title="Servers in Database", color=0x00ff00)
+        else:
+            embed = discord.Embed(color=0x00ff00)
+
+        # Add the server information to the Embed object.
+        for server_index, server in enumerate(servers[index:index + servers_per_page]):
+            # If the current server is the first server in the current
+            # server_group, add the field titles to the Embed object.
+            # Otherwise, skip adding the field titles.
+            if server_index == 0:
+                embed.add_field(name="Index", value=f'```{server[0]}```', inline=True)
+                embed.add_field(name="Game", value=f'```{server[5]}```', inline=True)
+                embed.add_field(name="Connection", value=f"```{server[1]}:{server[2]}```", inline=True)
+            else:
+                embed.add_field(name="\u200b", value=f'```{server[0]}```', inline=True)
+                embed.add_field(name="\u200b", value=f'```{server[5]}```', inline=True)
+                embed.add_field(name="\u200b", value=f"```{server[1]}:{server[2]}```", inline=True)
+        # Add the Embed object to the list.
+        embeds.append(embed)
+
+        # Increment the index by the number of servers per page.
+        index += servers_per_page
+
+    # Send the embeds to the channel, with the ephemeral flag set to True.
+    await interaction.response.send_message(embeds = embeds, ephemeral=True)
+
+@tree.command(name="serverdel", description="Delete a server from the database by index.", guild = discord.Object(id = 775165767398195200))
+@app_commands.describe(index=" Integer | The index of the server to delete.")
+async def delserver(interaction: discord.Interaction, index: int):
+    # Delete the server from the database.
+    serverstatus.database.delete(index)
+    serverstatus.database.reset_auto_increment()
+
+    # Send a confirmation message to the channel.
+    await interaction.response.send_message(f"Successfully deleted server at index {index} from the database!", ephemeral=True)
 
 client.run(str(serverstatus.token))
