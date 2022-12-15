@@ -16,7 +16,7 @@ Here are some features that this bot offers!
 
 ## Getting Started
 ### Prerequisites
-Install Python 3.8 or later if it is not already installed on your system. You can download and install Python from the [official Python website](https://www.python.org/downloads/).
+Install Python 3.9 or later if it is not already installed on your system. You can download and install Python from the [official Python website](https://www.python.org/downloads/).
 
 Create a new Discord bot by following the instructions on the [Discord Developer Portal](https://discord.com/developers/docs/intro). You will need to create/log into a Discord account and create a new application on the Developer Portal to create your bot.
 
