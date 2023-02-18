@@ -1,3 +1,6 @@
+# This bot will soon be marked "deprecated"!
+This script is very buggy and doesnt work half the time, Please visit my new repo [here](https://github.com/ihasTaco/ServerQuery), the new bot has been rewritten from the ground up with many new improvements (improvments will be expanded upon in further details there)
+
 # RP-Discord-Server-Status
 
 Server Status is an open-source Discord bot that allows users to quickly and easily view the status of their Source and Minecraft game servers. With customizable settings and live updates, this bot makes it easy for users to monitor the performance and activity levels of their servers in real-time. Created by Royal Productions, this bot is free to use and can be modified to fit the unique needs of any server.
