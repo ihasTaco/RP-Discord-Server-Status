@@ -1,5 +1,5 @@
-# This bot will soon be marked "deprecated"!
-This script is very buggy and doesnt work half the time, Please visit my new repo [here](https://github.com/ihasTaco/ServerQuery), the new bot has been rewritten from the ground up with many new improvements (improvments will be expanded upon in further details there)
+# This bot is now marked depricated
+If you still want to use an open source, fully customizable server status but, [check my new bot out!](https://github.com/ihasTaco/ServerQuery
 
 # RP-Discord-Server-Status
 
