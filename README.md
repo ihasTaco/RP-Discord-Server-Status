@@ -1,5 +1,5 @@
 # This bot is now marked depricated
-If you still want to use an open source, fully customizable server status but, [check my new bot out!](https://github.com/ihasTaco/ServerQuery
+If you still want to use an open source, fully customizable server status but, [check my new bot out!](https://github.com/ihasTaco/ServerQuery)
 
 # RP-Discord-Server-Status
 
